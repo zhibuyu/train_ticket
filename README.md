@@ -1,6 +1,6 @@
 # train_ticket
 ###### 一年一度的天朝大迁徙就要开始了，但是票还是依然的难抢，抢票软件给了钱也抢不到票，人在囧途；为此，博主参加编写了一个12306抢票脚本，抢票再也不用愁
-
+博客地址：[https://blog.csdn.net/u010123643/article/details/85272481](https://blog.csdn.net/u010123643/article/details/85272481)
 ## 运行代码
 python3
 
@@ -9,6 +9,7 @@ windows、mac、linux
 
 ## 使用工具
 chromedriver
+chromedriver下载地址[https://sites.google.com/a/chromium.org/chromedriver/downloads](https://sites.google.com/a/chromium.org/chromedriver/downloads)
 
 ## 用户信息输入
 在config.ini文件中编写即可，代码无需修改
