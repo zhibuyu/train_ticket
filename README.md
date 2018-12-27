@@ -8,7 +8,7 @@ python3
 windows、mac、linux
 
 ## 使用工具
-chromedriver
+chromedriver</br>
 chromedriver下载地址[https://sites.google.com/a/chromium.org/chromedriver/downloads](https://sites.google.com/a/chromium.org/chromedriver/downloads)
 
 ## 用户信息输入
