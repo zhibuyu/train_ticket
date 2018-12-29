@@ -159,7 +159,7 @@ class TrainTicket(object):
         count = 0
         while self.driver.url == self.ticket_url:
             self.searchMore()
-            sleep(0.3)
+            sleep(0.1)
             self.driver.find_by_text(u"查询").click()
             count += 1
             # print(u"循环点击查询... 第%s次" % count)
@@ -167,7 +167,7 @@ class TrainTicket(object):
 
             try:
                 self.driver.find_by_text(u"预订")[self.order-1].click()
-                sleep(0.3)
+                sleep(0.1)
             except Exception as e:
                 print(e)
                 print(u"还没开始预定")
@@ -237,7 +237,7 @@ class TrainTicket(object):
                 self.buyOrderZero()
 
             print(u"开始预定...")
-            sleep(0.8)
+            sleep(0.1)
             self.selUser()
             self.confirmOrder()
             self.submitOrder()
