@@ -54,6 +54,10 @@ class TrainTicket(object):
         self.initmy_url = cp.get("urlInfo", "initmy_url")
         self.buy = cp.get("urlInfo", "buy")
 
+        # 票种
+        ticker_type = cp.get("tickerInfo", "ticker_type")
+        self.tickerType = self.tickerMap[ticker_type] if ticker_type in self.tickerMap else ""
+
         seat_type = cp.get("confirmInfo", "seat_type")
         self.seatType = self.seatMap[seat_type] if seat_type in self.seatMap else ""
 
@@ -90,6 +94,12 @@ class TrainTicket(object):
             print("转换错误，修改config.ini中starts和ends城市名")
             return False
 
+    def loadTickerType(self):
+        self.tickerMap = {
+            "儿童票": "2",
+            "学生票": "3",
+            "残军票": "4"
+        }
 
     def loadSeatType(self):
         self.seatMap = {
@@ -107,6 +117,7 @@ class TrainTicket(object):
 
     def __init__(self):
         self.city_codes = self.loadCityCode()
+        self.loadTickerType()
         self.loadSeatType()
         self.loadConfig()
 
@@ -200,6 +211,15 @@ class TrainTicket(object):
             print("选择用户",user)
             self.driver.find_by_text(user).last.click()
 
+    def confirmTickerType(self):
+        print(u"选择票种")
+        if self.tickerType:
+            print("票种",self.tickerType)
+            self.driver.find_by_value(self.tickerType).click()
+        else:
+            print(u"未指定席别，按照12306默认成人票")
+
+
     def confirmOrder(self):
         print(u"选择席别")
         if self.seatType:
@@ -241,6 +261,7 @@ class TrainTicket(object):
             print(u"开始预定...")
             sleep(0.8)
             self.selUser()
+            self.confirmTickerType()
             self.confirmOrder()
             self.submitOrder()
             self.confirmSeat()
