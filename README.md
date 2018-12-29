@@ -12,13 +12,14 @@ windows、mac、linux
 chromedriver下载地址[https://sites.google.com/a/chromium.org/chromedriver/downloads](https://sites.google.com/a/chromium.org/chromedriver/downloads)
 
 ###代理设置
-'''
- # PROXY = "119.101.113.139:9999"  #代理ip地址
- # chrome_options = Options()
- # chrome_options.add_argument('--proxy-server=http://%s' % PROXY)
-# 使用代理ip访问，免费的最好不要用，12306很容易超时，可以自行购买代理ip
- # self.driver = Browser(driver_name=self.driver_name, executable_path=self.executable_path,chrome_options=chrome_options) 
- '''
+```
+PROXY = "119.101.113.139:9999"  #代理ip地址
+chrome_options = Options()
+chrome_options.add_argument('--proxy-server=http://%s' % PROXY)
+使用代理ip访问，免费的最好不要用，12306很容易超时，可以自行购买代理ip
+self.driver = Browser(driver_name=self.driver_name, executable_path=self.executable_path,chrome_options=chrome_options) 
+```
+
 ## 用户信息输入
 在config.ini文件中编写即可，代码无需修改
 
