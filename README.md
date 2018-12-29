@@ -9,6 +9,7 @@ windows、mac、linux
 
 ## 使用工具
 **chromedriver**</br>
+请选择与之前Chrome浏览器对应的版本
 chromedriver下载地址[https://sites.google.com/a/chromium.org/chromedriver/downloads](https://sites.google.com/a/chromium.org/chromedriver/downloads)
 
 ## 代理设置

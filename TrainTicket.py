@@ -197,6 +197,7 @@ class TrainTicket(object):
     def selUser(self):
         print(u"开始选择用户...")
         for user in self.users:
+            print("选择用户",user)
             self.driver.find_by_text(user).last.click()
 
     def confirmOrder(self):
