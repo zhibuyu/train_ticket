@@ -11,7 +11,7 @@ windows、mac、linux
 **chromedriver**</br>
 chromedriver下载地址[https://sites.google.com/a/chromium.org/chromedriver/downloads](https://sites.google.com/a/chromium.org/chromedriver/downloads)
 
-###代理设置
+## 代理设置
 ```
 PROXY = "119.101.113.139:9999"  #代理ip地址
 chrome_options = Options()
