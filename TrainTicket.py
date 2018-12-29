@@ -9,6 +9,7 @@
 @desc: 12306抢票
 '''
 from splinter.browser import Browser
+from splinter.driver.webdriver.chrome import Options, Chrome
 from configparser import ConfigParser
 from time import sleep
 import sys
@@ -248,6 +249,13 @@ class TrainTicket(object):
             print(e)
 
     def start(self):
+        # 代理设置
+        # PROXY = "119.101.113.139:9999"  #代理ip地址
+        # chrome_options = Options()
+        # chrome_options.add_argument('--proxy-server=http://%s' % PROXY)
+        # 使用代理ip访问，免费的最好不要用，12306很容易超时，可以自行购买代理ip
+        # self.driver = Browser(driver_name=self.driver_name, executable_path=self.executable_path,chrome_options=chrome_options)
+
         self.driver = Browser(driver_name=self.driver_name, executable_path=self.executable_path)
         self.driver.driver.set_window_size(1400, 1000)
         self.login()
