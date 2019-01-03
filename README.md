@@ -25,6 +25,10 @@ self.driver = Browser(driver_name=self.driver_name, executable_path=self.executa
 ## 用户信息输入
 在config.ini文件中编写即可，代码无需修改
 
+#### 需注意点
+config.ini文件 路径信息 executable_path的选择，按照注释所说选择mac的还是windows的路径
+请确定你Chrome版本与chromedriver对应的版本，chromedriver下载版本对应在下载（[http://chromedriver.storage.googleapis.com/index.html](http://chromedriver.storage.googleapis.com/index.html)）时可以通过文件notes.txt查看不同版本的chromedriver对应的Chrome版本
+
 ### 运行效果
 <img src="https://github.com/zhibuyu/train_ticket/blob/master/show/effect.gif?raw=true" /></br>
 
