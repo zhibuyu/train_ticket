@@ -29,6 +29,15 @@ self.driver = Browser(driver_name=self.driver_name, executable_path=self.executa
 config.ini文件 路径信息 executable_path的选择，按照注释所说选择mac的还是windows的路径(如需添加linx,可以仿照mac的编写)
 请确定你Chrome版本与chromedriver对应的版本，chromedriver下载版本对应在下载（[http://chromedriver.storage.googleapis.com/index.html](http://chromedriver.storage.googleapis.com/index.html)）时可以通过文件notes.txt查看不同版本的chromedriver对应的Chrome版本
 
+根据下载地址打开选择一个版本进入，我这以2.45为例，便可以进入下图所示界面，点击箭头指向文件notes.txt
+<img src="https://github.com/zhibuyu/train_ticket/blob/master/show/instructions1.png?raw=true" /></br>
+便可以看到下图，图中说2.45版本对应的chrome版本为70到72
+<img src="https://github.com/zhibuyu/train_ticket/blob/master/show/instructions2.png?raw=true" /></br>
+那现在我们去查看下我们电脑安装的Chrome的版本号，点击Chrome的设置-->>关于Chrome,便可以看到下图所示截图，我这里的版本是71，则我需要下载的chromedriver版本为2.45
+<img src="https://github.com/zhibuyu/train_ticket/blob/master/show/instructions3.png?raw=true" /></br>
+
+#### chromedriver下载后存放文件位置说明
+windows系统的直接存放在项目同级目录下， mac系统则存放在mac文件夹下，linux系统按照mac的一样配置即可
 ### 运行效果
 <img src="https://github.com/zhibuyu/train_ticket/blob/master/show/effect.gif?raw=true" /></br>
 
